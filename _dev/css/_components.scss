@@ -1,0 +1,323 @@
+.customer {
+  display: inline-flex;
+  align-items: center;
+
+  &-logged {
+    border-bottom: 1rem solid $main-color-links;
+  }
+  &-username {
+    text-transform: uppercase;
+    color: $main-color-links;
+  }
+}
+
+.menu {
+  color: $main-color-links;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &-header {
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 37.5em) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-buylink {
+    width: 6rem;
+    text-transform: uppercase;
+    text-align: center;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+
+    & > a {
+      margin-left: .5rem;
+      font-size: 3rem;
+    }
+  }
+  &-icon {
+    width: 6rem;
+    transition: all 0.2s;
+
+    &-rotated {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &-list {
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 6rem;
+    @media only screen and (max-width: 37.5em) {
+      margin-right: 0;
+    }
+  }
+  &-item {
+    display: none;
+    list-style-type: none;
+    & > a {
+      font-size: 4rem;
+    }
+
+    &-current {
+      display: inline-block;
+      border-bottom: 0.3rem solid $main-color-links;
+    }
+  }
+}
+
+.blockcart-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blockcart {
+  width: 6rem;
+}
+
+.bag {
+  position: relative;
+  text-align: center;
+  & > img {
+    width: 100%;
+  }
+  & > .cart-products-count {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+  }
+}
+
+.blockcart-modal {
+  position: fixed;
+  top: 20rem;
+  width: 40%;
+  background-color: #eee;
+  padding: 5rem;
+  border-radius: 0.3rem;
+  font-size: 2rem;
+  border: 0.3rem solid;
+  margin: 0 auto;
+  left: 30%;
+  box-shadow: 0.3rem 0.3rem;
+}
+
+.product {
+  &-price {
+    color: $main-color-links;
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  &-actions {
+    text-align: center;
+  }
+  &-variants {
+    text-align: left;
+    margin: 2rem 0;
+    & > label {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.add-to-cart,
+.checkout {
+  border: none;
+  background-color: $main-bgcolor-button;
+  padding: 0.6rem 1.2rem;
+  color: $main-color-links;
+  border-bottom: 0.3rem solid;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  &-step {
+    border-bottom: 0.3rem dashed;
+    padding-bottom: 3rem;
+  }
+}
+.group-container {
+  margin-top: 1rem;
+}
+
+.input-container {
+  display: inline;
+
+  margin: 0 0.5rem;
+  & > label {
+    cursor: pointer;
+  }
+  & > input {
+    display: none;
+  }
+  &-selected {
+    border-bottom: 0.3rem solid black;
+  }
+}
+
+.header-top {
+  position: relative;
+  text-align: center;
+
+  &.logo-collezioni > img {
+    width: 30rem;
+  }
+}
+.logo {
+  position: relative;
+  text-align: center;
+}
+
+.field-box {
+  margin: 2rem auto;
+}
+
+.form-group-input {
+  text-align: left;
+
+  &--label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+  }
+  &--value {
+    border: $padding-border solid $main-color-text;
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+.form-button {
+  width: 100%;
+  background-color: $main-bgcolor-button;
+  color: $main-color-text;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.lost_password {
+  margin: 2rem 0;
+  text-align: left;
+
+  & > a {
+    text-decoration: underline;
+  }
+}
+
+.cart-step {
+  &-header {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &-prenumber {
+    font-size: 6rem;
+  }
+  &-number {
+    font-size: 6rem;
+    color: $main-color-links;
+
+    &::before {
+      content: "0";
+    }
+  }
+  &-title {
+    font-size: 4rem;
+    text-transform: lowercase;
+  }
+
+  &-loglink {
+    padding: 3rem;
+    text-align: center;
+  }
+}
+
+.form-errors > li {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.action-default {
+  text-decoration: underline;
+
+  &:hover {
+    font-weight: 700;
+    color: inherit;
+  }
+}
+
+.action-primary {
+  color: $main-color-links;
+  &:hover {
+    font-weight: 700;
+    color: $main-color-links;
+  }
+}
+
+.action-disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+//my-account
+
+.page-my-account {
+  & > p {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  & > .link-list {
+    & > li {
+      margin: 3rem;
+
+      & > a {
+        font-size: 2rem;
+        text-decoration: underline;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.address-actions {
+  margin-top: 4rem;
+}
+
+.notification {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 3rem;
+  background-color: #eee;
+  padding: 4rem;
+
+  &.notification-danger {
+    color: red;
+  }
+  &.notification-warning {
+    color: orangered;
+  }
+  &.notification-success {
+    color: green;
+  }
+  &.notification-info {
+    color: deepskyblue;
+  }
+}
