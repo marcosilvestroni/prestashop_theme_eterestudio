@@ -32,7 +32,7 @@
         "webpack": "^1.13.1"
     },
     "dependencies": {
-        "jquery": "^3.3.1",
+        "jquery": "^3.4.0",
         "orator-npm-webfont": "0.0.2"
     }
 }
